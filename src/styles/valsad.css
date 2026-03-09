@@ -1,0 +1,463 @@
+/* ============================
+   VALSAD PAGE — STYLES
+   ============================ */
+
+.vs-hero-bg {
+    background: url('/images/valsad-hero.png') center/cover no-repeat !important;
+}
+
+/* About */
+.vs-about {
+    padding: var(--section-py) 0;
+    background: var(--navy);
+}
+
+.vs-about__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.vs-about__desc {
+    color: var(--white-70);
+    font-size: .95rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.vs-about__highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 32px;
+}
+
+.vs-about__highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    background: var(--white-08);
+    border-radius: var(--radius);
+    border: 1px solid var(--white-08);
+    transition: border-color var(--transition);
+}
+
+.vs-about__highlight:hover {
+    border-color: var(--gold-dim);
+}
+
+.vs-about__highlight i {
+    color: var(--gold);
+    font-size: 1.2rem;
+    margin-top: 2px;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.vs-about__highlight strong {
+    display: block;
+    font-family: var(--ff-serif);
+    font-size: .95rem;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.vs-about__highlight p {
+    font-size: .78rem;
+    color: var(--white-40);
+    margin: 0;
+}
+
+.vs-about__img {
+    width: 100%;
+    height: 520px;
+    border-radius: var(--radius-lg);
+    background: var(--navy-light);
+    background-size: cover;
+    background-position: center;
+}
+
+/* Rooms */
+.vs-rooms {
+    padding: var(--section-py) 0;
+    background: var(--navy-deep);
+}
+
+.vs-rooms__intro {
+    max-width: 600px;
+    color: var(--white-70);
+    font-size: .95rem;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.vs-rooms__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+
+/* Banquet */
+.vs-banquet {
+    padding: var(--section-py) 0;
+    background: var(--navy);
+    text-align: center;
+}
+
+.vs-banquet__intro {
+    max-width: 640px;
+    margin: 0 auto 48px;
+    color: var(--white-70);
+    font-size: .95rem;
+    line-height: 1.8;
+}
+
+.vs-banquet__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: var(--container-w);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.vs-banquet__card {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    height: 400px;
+}
+
+.vs-banquet__img {
+    position: absolute;
+    inset: 0;
+    background: var(--navy-light);
+    background-size: cover;
+    background-position: center;
+    transition: transform .8s ease;
+}
+
+.vs-banquet__card:hover .vs-banquet__img {
+    transform: scale(1.06);
+}
+
+.vs-banquet__card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(8, 15, 31, .85) 0%, rgba(8, 15, 31, .1) 60%);
+    pointer-events: none;
+}
+
+.vs-banquet__overlay {
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    right: 32px;
+    z-index: 2;
+    text-align: left;
+}
+
+.vs-banquet__overlay h3 {
+    font-family: var(--ff-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.vs-banquet__overlay p {
+    font-size: .82rem;
+    color: var(--white-70);
+    margin-bottom: 16px;
+}
+
+/* Restaurant */
+.vs-restaurant {
+    padding: var(--section-py) 0;
+    background: var(--navy-deep);
+}
+
+.vs-restaurant__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    max-width: var(--container-w);
+    margin: 0 auto;
+}
+
+.vs-restaurant__images {
+    display: grid;
+    grid-template-rows: 1.4fr 1fr;
+    gap: 16px;
+    padding: 40px;
+}
+
+.vs-restaurant__img {
+    border-radius: var(--radius-lg);
+    background: var(--navy-light);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform var(--transition);
+}
+
+.vs-restaurant__img:hover {
+    transform: scale(1.03);
+}
+
+.vs-restaurant__img--main {
+    min-height: 280px;
+}
+
+.vs-restaurant__img--secondary {
+    min-height: 180px;
+}
+
+.vs-restaurant__content {
+    padding: 60px 60px 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.vs-restaurant__desc {
+    color: var(--white-70);
+    font-size: .95rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+}
+
+.vs-restaurant__features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+
+.vs-restaurant__feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .85rem;
+    color: var(--white-70);
+}
+
+.vs-restaurant__feature i {
+    color: var(--gold);
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Gallery */
+.vs-gallery {
+    padding: var(--section-py) 0;
+    background: var(--navy);
+}
+
+.vs-gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 16px;
+    margin-top: 48px;
+}
+
+.vs-gallery__item {
+    border-radius: var(--radius-lg);
+    background: var(--navy-light);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform var(--transition);
+    cursor: pointer;
+}
+
+.vs-gallery__item:hover {
+    transform: scale(1.03);
+}
+
+.vs-gallery__item--wide {
+    grid-column: span 2;
+}
+
+/* Contact */
+.vs-contact {
+    padding: var(--section-py) 0;
+    background: var(--navy-deep);
+}
+
+.vs-contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.vs-contact__details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.vs-contact__detail {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.vs-contact__detail i {
+    color: var(--gold);
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.vs-contact__detail h4 {
+    font-family: var(--ff-serif);
+    font-size: .95rem;
+    color: var(--white);
+    margin-bottom: 4px;
+}
+
+.vs-contact__detail p {
+    font-size: .85rem;
+    color: var(--white-70);
+    line-height: 1.6;
+}
+
+.vs-contact__social {
+    display: flex;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.vs-contact__social a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid var(--white-15);
+    color: var(--white-70);
+    font-size: .9rem;
+    transition: all var(--transition);
+}
+
+.vs-contact__social a:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--navy-deep);
+}
+
+.vs-contact__form-wrap {
+    background: var(--navy-light);
+    border: 1px solid var(--white-08);
+    border-radius: var(--radius-lg);
+    padding: 40px;
+}
+
+.vs-contact__form-wrap h3 {
+    font-family: var(--ff-serif);
+    font-size: 1.3rem;
+    color: var(--white);
+    margin-bottom: 28px;
+}
+
+.vs-contact__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.vs-contact__form input,
+.vs-contact__form textarea {
+    background: var(--white-08);
+    border: 1px solid var(--white-15);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    color: var(--white-90);
+    font-family: var(--ff-sans);
+    font-size: .88rem;
+    outline: none;
+    transition: border-color var(--transition);
+    resize: vertical;
+}
+
+.vs-contact__form input:focus,
+.vs-contact__form textarea:focus {
+    border-color: var(--gold);
+}
+
+.vs-contact__form input::placeholder,
+.vs-contact__form textarea::placeholder {
+    color: var(--white-40);
+}
+
+@media (max-width: 1024px) {
+
+    .vs-about__grid,
+    .vs-restaurant__grid,
+    .vs-contact__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vs-rooms__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .vs-banquet__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vs-restaurant__content {
+        padding: 40px;
+    }
+
+    .vs-about__img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .vs-rooms__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vs-about__highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .vs-restaurant__images {
+        padding: 20px;
+    }
+
+    .vs-restaurant__features {
+        grid-template-columns: 1fr;
+    }
+
+    .vs-gallery__grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 180px;
+    }
+
+    .vs-gallery__item--wide {
+        grid-column: span 1;
+    }
+
+    .vs-banquet__card {
+        height: 300px;
+    }
+
+    .vs-contact__form-wrap {
+        padding: 28px;
+    }
+}
